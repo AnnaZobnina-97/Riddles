@@ -1,15 +1,15 @@
 let riddles = [];
 riddles[0] = {
     riddleText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores beatae ut reprehenderit laudantium ea dolorum quo minima voluptates. Possimus, aliquam1.",
-    riddleSolution: "lorem1"
+    riddleSolution: ["lorem1", "1"]
 }
 riddles[1] = {
     riddleText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores beatae ut reprehenderit laudantium ea dolorum quo minima voluptates. Possimus, aliquam2.",
-    riddleSolution: "lorem2"
+    riddleSolution: ["lorem2", "2"]
 }
 riddles[2] = {
     riddleText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores beatae ut reprehenderit laudantium ea dolorum quo minima voluptates. Possimus, aliquam3.",
-    riddleSolution: "lorem3"
+    riddleSolution: ["lorem3", "3"]
 }
 
 let numRiddle = 0;
@@ -29,13 +29,17 @@ let popupResult = document.querySelectorAll('.popup__result')[0];
 
 btnSubmit.addEventListener('click', function() {
     attempts++;
-    if(riddleAnswer.value.toLowerCase() != riddles[numRiddle].riddleSolution.toLowerCase()) {
-        popupResult.innerHTML = 'Не угадали :(';
+    let flag = false;
+    for(let i = 0; i < riddles[numRiddle].riddleSolution.length; i++) {
+        if(riddleAnswer.value.toLowerCase() == riddles[numRiddle].riddleSolution[i].toLowerCase()) {
+            flag = true;
+        }
     }
-    else {
+    if(flag) {
         popupResult.innerHTML = 'Верно, поздравляем!';
         rights++;
     }
+    else { popupResult.innerHTML = 'Не угадали :('; }
     popup.style.display = 'block';
 });
 
