@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загадки</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="./js/script.js"></script> -->
+</head>
+<body>
+    <div class="riddle">
+        <div class="riddle__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores beatae ut reprehenderit laudantium ea dolorum quo minima voluptates. Possimus, aliquam.
+        </div>
+        <label class="riddle__label" for="">Ваш ответ:<input class="riddle__answer" type="text"></label>
+        <button class="riddle__btn" type="submit">Отправить</button>
+    </div>
+
+    <div class="popup" id="check">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <span class="popup__result">Верно!</span>
+                <button class="riddle__btn popup__btn--try_again">Попробовать еще раз</button>
+                <button class="riddle__btn popup__btn--next">Перейти к следующей</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="result">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <span class="popup__num_try"></span><br>
+                <span class="popup__num_right"></span>
+                <button class="riddle__btn popup__btn--clear">Начать сначала</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

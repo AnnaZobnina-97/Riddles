@@ -1,0 +1,110 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: rgba(44, 74, 82, 0.918);
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.riddle {
+    width: 500px;
+
+    background-color: rgb(178, 224, 221);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+
+    padding: 30px;
+    margin: auto;
+
+    /* display: flex; */
+}
+
+.riddle__text {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.riddle__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.riddle__label > input {
+    width: 350px;
+    height: 25px;
+    font-size: 1em;
+}
+
+.riddle__label > input, .riddle__btn {
+    border: 2px solid rgb(160, 180, 179);
+    border-radius: 5px;
+
+    transition: border .2s ease-out;
+}
+
+.riddle__btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+
+    font-size: 1em;
+    text-transform: uppercase;
+    color: rgb(63, 134, 130);
+
+    cursor: pointer;
+}
+
+.riddle__btn:hover {
+    background-color:  rgb(63, 134, 130);
+    color: #fff;
+}
+
+.riddle__label > input:focus, .riddle__btn:focus {
+    border: 2px solid rgb(63, 134, 130);
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(29, 50, 56, .7);
+}
+
+.popup__wrapper {
+    min-height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__content {
+    padding: 30px 10px; 
+
+    background-color: rgb(178, 224, 221);
+    border: 8px solid #ebebeb;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+
+    color: rgb(63, 134, 130);
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.popup__num_try {
+    margin-bottom: 25px;
+}
