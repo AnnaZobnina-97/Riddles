@@ -1,3 +1,4 @@
+// Массив загадок и ответов к ним
 let riddles = [];
 riddles[0] = {
     riddleText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores beatae ut reprehenderit laudantium ea dolorum quo minima voluptates. Possimus, aliquam1.",
@@ -12,20 +13,20 @@ riddles[2] = {
     riddleSolution: ["lorem3", "3"]
 }
 
-let numRiddle = 0;
-let attempts = 0;
-let rights = 0;
+let numRiddle = 0; // Позиция текущей загадки в массиве
+let attempts = 0; // Счетчик попыток
+let rights = 0; // Счетчик правильных ответов
 
 let btnSubmit = document.querySelectorAll('.riddle__btn')[0];
 let popup = document.querySelectorAll('#check')[0];
 
-//  Кнопки на модальном окне
+//  Кнопки на модальных окнах
 let btnTryAgain = document.querySelectorAll('.popup__btn--try_again')[0];
 let btnNext = document.querySelectorAll('.popup__btn--next')[0];
 let btnClear = document.querySelectorAll('.popup__btn--clear')[0];
 
-let riddleAnswer = document.querySelectorAll('.riddle__answer')[0];
-let popupResult = document.querySelectorAll('.popup__result')[0];
+let riddleAnswer = document.querySelectorAll('.riddle__answer')[0]; // Ответ пользователя
+let popupResult = document.querySelectorAll('.popup__result')[0]; // Оценка ответа
 
 btnSubmit.addEventListener('click', function() {
     attempts++;
@@ -43,9 +44,11 @@ btnSubmit.addEventListener('click', function() {
     popup.style.display = 'block';
 });
 
+
 btnTryAgain.addEventListener('click', function() {
     popup.style.display = 'none';
 });
+
 
 btnNext.addEventListener('click', function() {
     numRiddle++;
@@ -64,6 +67,7 @@ btnNext.addEventListener('click', function() {
         document.querySelectorAll('#result')[0].style.display = 'block';
     }
 });
+
 
 btnClear.addEventListener('click', function() {
     numRiddle = 0;
